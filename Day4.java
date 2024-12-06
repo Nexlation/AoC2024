@@ -38,35 +38,27 @@ public class Day4 {
                 if (list[i][j] == 'X'){
                     if (i + 3 < height && list[i+1][j] == 'M' && list[i+2][j] == 'A' && list[i+3][j] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " down");
                     }
                     if(i - 3 >= 0 && list[i-1][j] == 'M' && list[i-2][j] == 'A' && list[i-3][j] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " up"); 
                     }
                     if (j + 3 < width && list[i][j+1] == 'M' && list[i][j+2] == 'A' && list[i][j+3] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " right");
                     }
                     if (j - 3 >= 0 && list[i][j-1] == 'M' && list[i][j-2] == 'A' && list[i][j-3] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " left");
                     }
                     if (i + 3 < height && j + 3 < width && list[i+1][j+1] == 'M' && list[i+2][j+2] == 'A' && list[i+3][j+3] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " down right");
                     }
                     if (i - 3 >= 0 && j + 3 < width && list[i-1][j+1] == 'M' && list[i-2][j+2] == 'A' && list[i-3][j+3] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " up right");
                     }
                     if (i + 3 < height && j - 3 >= 0 && list[i+1][j-1] == 'M' && list[i+2][j-2] == 'A' && list[i+3][j-3] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " down left");
                     }
                     if (i - 3 >= 0 && j - 3 >= 0 && list[i-1][j-1] == 'M' && list[i-2][j-2] == 'A' && list[i-3][j-3] == 'S'){
                         count++;
-                        //System.out.println("Pair " + count + " at " + i + ", " + j + " up left");
                     }
                 }
             }
