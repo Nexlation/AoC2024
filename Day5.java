@@ -12,18 +12,20 @@ public class Day5 {
         String curLine = "";
         while (in.hasNextLine()){
             curLine = in.nextLine();
+            int side1 = Integer.valueOf(curLine.substring(0, 2));
+            int side2 = Integer.valueOf(curLine.substring(3));
             if (blankCheck == 0){
                 if (!curLine.equals("")){
-                    if (num1.contains(Integer.valueOf(curLine.substring(0, 2)))){
+                    if (num1.contains(side1)){
                         for (int i = 0; i < num1.size(); i++){
-                            if (num1.get(i) == Integer.valueOf(curLine.substring(0, 2))){
-                                num2.get(i).add(Integer.valueOf(curLine.substring(3)));
+                            if (num1.get(i) == side1){
+                                num2.get(i).add(side2);
                             }
                         }
                     } else {
-                        num1.add(Integer.valueOf(curLine.substring(0, 2)));
+                        num1.add(side1);
                         num2.add(new ArrayList<Integer>());
-                        num2.get(num1.size()-1).add(Integer.valueOf(curLine.substring(3)));
+                        num2.get(num1.size()-1).add(side2);
                     }
                 } else {
                     blankCheck =1;
